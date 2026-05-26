@@ -26,12 +26,12 @@ public:
       //   int left  =0 , right = n-1;
 
 
-      //   while(left < right){
+      //   while(left <= right){
 
       //       if(left_max <= right_max){
 
 
-      //           if(arr[left] > left_max) left_max = arr[left] ;
+      //           if(arr[left] >= left_max) left_max = arr[left] ;
       //           else{
       //               water += left_max - arr[left];
       //               left++;
@@ -39,7 +39,7 @@ public:
 
       //       }
       //       else{
-      //             if(arr[right] > right_max) right_max = arr[left] ;
+      //             if(arr[right] >= right_max) right_max = arr[right] ;
       //           else{
       //               water += right_max - arr[right];
       //               right--;
