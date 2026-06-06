@@ -15,5 +15,23 @@ public:
             ans.push_back(abs(right_sum - (left_sum - nums[i])));
         }
         return ans;
+
+
+
+        //   int total = accumulate(nums.begin(), nums.end(), 0);
+
+        // int left = 0;
+        // vector<int> ans;
+
+        // for(int i = 0; i < nums.size(); i++) {
+
+        //     total -= nums[i]; 
+
+        //     ans.push_back(abs(left - total));
+
+        //     left += nums[i];
+        // }
+
+        // return ans;
     }
 };
