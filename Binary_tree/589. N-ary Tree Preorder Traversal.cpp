@@ -20,23 +20,39 @@ public:
 
 class Solution {
 public:
-void solve(Node* root , vector<int>& arr){
+// void solve(Node* root , vector<int>& arr){
 
-    if(root == NULL){
-        return ;
-    }
+//     if(root == NULL){
+//         return ;
+//     }
 
 
-    arr.push_back(root->val);
+//     arr.push_back(root->val);
 
-    for(Node* child : root->children){
-        solve(child , arr);
-    }
-}
+//     for(Node* child : root->children){
+//         solve(child , arr);
+//     }
+// }
     vector<int> preorder(Node* root) {
-        vector<int> arr;
-        solve(root, arr);
+        // vector<int> arr;
+        // solve(root, arr);
 
-        return arr;
+        // return arr;
+
+         vector<int> ans;
+        stack<Node*> st;
+        st.push(root);
+        if (root == nullptr)
+            return ans;
+
+        while (!st.empty()) {
+            root = st.top();
+            ans.push_back(root->val);
+            st.pop();
+            for (int i = root->children.size() - 1; i >= 0; i--) {
+                st.push(root->children[i]);
+            }
+        }
+        return ans;
     }
 };
